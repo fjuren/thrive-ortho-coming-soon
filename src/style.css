@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Custom colors for Tailwind v4 */
+@theme {
+  --color-primary-blue: #1D417F;
+  --color-secondary-gray: #555555;
+  --color-teal-accent: #93E1E1;
+  --color-coral-light: #FFF1EE;
+  --color-coral: #FFC4B7;
+  --color-white: #FFFF;
+}
+
+/* Custom styles for elements that need specific styling */
+.laptop-icon {
+  position: relative;
+}
+
+.laptop-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 6px;
+  background: #4BCECD;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Focus styles for accessibility */
+.social-link:focus {
+  outline: 2px solid #1D417F;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .social-link {
+    transition: none;
+  }
+}
